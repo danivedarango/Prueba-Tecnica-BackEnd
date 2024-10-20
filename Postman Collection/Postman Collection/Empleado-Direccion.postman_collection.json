@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "5a4e8354-6db9-4779-840f-0e2cb12aa78b",
+		"name": "Empleado-Direccion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38403717"
+	},
+	"item": [
+		{
+			"name": "Empleado",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/Empleado/listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"Empleado",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": 3,\r\n    \"firstName\": \"Luis\",\r\n    \"lastName\": \"Velazquez\",\r\n    \"curp\": \"LUVE12109126MNLL07\",\r\n    \"puesto\": \"Desarrollador\",\r\n    \"claveUnica\": \"LUVE12109126MNLL07\",\r\n    \"jefeInmediatoId\": {\r\n        \"employeeId\": 1 \r\n    }\r\n\r\n}\r\n\r\n        ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/Empleado/guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"Empleado",
+								"guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": 3,\r\n    \"firstName\": \"Luis\",\r\n    \"lastName\": \"Velazquez\",\r\n    \"curp\": \"LUVE12109126MNLL07\",\r\n    \"puesto\": \"Desarrollador\",\r\n    \"claveUnica\": \"LUVE12109126MNLL07\",\r\n    \"jefeInmediatoId\": {\r\n        \"employeeId\": 2 \r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/Empleado/editar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"Empleado",
+								"editar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
